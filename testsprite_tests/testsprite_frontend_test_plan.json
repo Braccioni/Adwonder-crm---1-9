@@ -1,0 +1,385 @@
+[
+  {
+    "id": "TC001",
+    "title": "Access Operational Dashboard without Authentication",
+    "description": "Verify the user can access the Adwonder CRM operational dashboard via public link without any login or authentication steps.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the Adwonder CRM URL in a web browser without any login credentials."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the operational dashboard loads successfully showing pipeline, deals, and KPIs."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "CRUD Operations on Client Management",
+    "description": "Verify that the system supports Create, Read, Update, and Delete operations for clients, including client status tracking and contact details.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Client Management section."
+      },
+      {
+        "type": "action",
+        "description": "Create a new client providing all required details including status (Lead, Prospect, Active, Inactive)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new client appears in the client list with correct details and status."
+      },
+      {
+        "type": "action",
+        "description": "Edit the created client's details, changing status and contact information."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the client's updated details are correctly saved and displayed."
+      },
+      {
+        "type": "action",
+        "description": "Delete the client."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the client is removed from the client list and no longer accessible."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Import Clients via Excel File",
+    "description": "Verify that client data can be imported from Excel files without data loss or corruption.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Client Management import section."
+      },
+      {
+        "type": "action",
+        "description": "Upload a valid Excel file containing multiple client records with varying statuses."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that all clients from the Excel file are correctly imported and displayed with valid data."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that no duplicate or corrupted entries exist and data validation errors are handled gracefully."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Deal Management: Create, Update, Track Status & Values",
+    "description": "Validate the functionality to create and modify commercial deals, set economic values, states, and deadlines with proper tracking.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open Deal Management section."
+      },
+      {
+        "type": "action",
+        "description": "Create a new deal with custom title, monthly and one-time economic values, deadline, and initial state 'In Progress'."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the deal appears with all correct data including calculated totals and deadlines."
+      },
+      {
+        "type": "action",
+        "description": "Update the deal’s state sequentially to 'Won', then to 'Postponed', and then to 'Lost'."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the UI and backend correctly reflect the updated states and deal history."
+      },
+      {
+        "type": "action",
+        "description": "Modify economic values and deadlines on the deal."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the updated values and deadlines are saved and reflected correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Track Activities: Logging Calls, Emails, Meetings with Outcomes and Notes",
+    "description": "Test the ability to manage activities with details including types, outcomes, notes, and reminders.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access the Activity Tracking section."
+      },
+      {
+        "type": "action",
+        "description": "Create activities of types call, email, and meeting with associated notes, outcomes, and schedule reminders."
+      },
+      {
+        "type": "assertion",
+        "description": "Validate that each activity is listed correctly with all inputted details."
+      },
+      {
+        "type": "action",
+        "description": "Edit an activity to update outcomes, notes, or reschedule the reminder."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that the changes are saved and reminders are triggered at appropriate times."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Operational Dashboard Metrics and Pipeline Real-Time Update",
+    "description": "Verify that the Kanban-style pipeline view and performance KPIs on the dashboard update in real-time reflecting the latest data.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the operational dashboard."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that pipeline stages and deal statuses are displayed correctly with matching KPIs and metrics."
+      },
+      {
+        "type": "action",
+        "description": "Make a change to a deal or client affecting pipeline stage or KPI."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the dashboard updates in real-time without needing a page refresh."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Project Operations: Managing Projects, Collaborators, Budgets, Timelines and Tokens",
+    "description": "Test full lifecycle management of operational projects including collaborator roles, budget assignment, timelines, and token based incentives.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Project Operations section."
+      },
+      {
+        "type": "action",
+        "description": "Create a new project with budget, timeline, collaborators and assign token incentives."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the project details are saved and appear correctly in the project list and details view."
+      },
+      {
+        "type": "action",
+        "description": "Edit the project to modify budget, timelines, collaborator roles and tokens."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm all modifications are persisted and correctly displayed."
+      },
+      {
+        "type": "action",
+        "description": "Remove a collaborator from the project."
+      },
+      {
+        "type": "assertion",
+        "description": "Check the collaborator is removed and related assignments are updated accordingly."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Notification System Triggers Reminders for Contracts and Deadlines",
+    "description": "Ensure automatic notifications are sent on contract expiry deadlines and scheduled follow-ups with timely reminders.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Create a client contract or deal with a specific deadline."
+      },
+      {
+        "type": "action",
+        "description": "Set follow-up activities with scheduled reminders."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that notification system triggers reminders exactly on configured times."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that notifications appear in the UI notification center and optionally via other configured channels."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Export Reports to Excel and Verify Data Accuracy",
+    "description": "Test the ability to export reports and analytics data correctly into Excel format without loss of data or formatting issues.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Reports & Analytics section."
+      },
+      {
+        "type": "action",
+        "description": "Generate various reports filtering by different parameters such as date, client status, deal states."
+      },
+      {
+        "type": "action",
+        "description": "Export each generated report to Excel format."
+      },
+      {
+        "type": "assertion",
+        "description": "Open exported Excel files and verify all expected data is present, correctly structured and formatted."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Sidebar Navigation: Lazy Loading and Active State Management",
+    "description": "Verify the sidebar correctly uses lazy loading for components and accurately manages active state on navigation.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the application and observe sidebar component loading behavior."
+      },
+      {
+        "type": "action",
+        "description": "Click through various sidebar navigation links sequentially."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm components are loaded on demand (lazy loading) without delays."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar highlights the active navigation item correctly at all times."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Error Handling: Validation Errors on Client and Deal Forms",
+    "description": "Test the system's validation and error handling by submitting invalid or incomplete data in client and deal forms.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt to create a new client without required fields such as name or contact info."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that validation errors are displayed clearly preventing submission."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to create a deal with negative economic values or invalid deadlines."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm error messages appear and prevent saving corrupted deal data."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Data Persistence and Consistency with Supabase Integration",
+    "description": "Validate the data persistence layer built with Supabase ensures reliable saving, retrieval and consistency across all modules.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform CRUD operations on clients, deals, activities, projects and collaborators."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all data changes persist correctly in Supabase backend."
+      },
+      {
+        "type": "action",
+        "description": "Refresh the frontend and validate all data is reloaded and synchronized accurately."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Security: Verify System Supports Unauthenticated Public Access Safely",
+    "description": "Check that the system allows unauthenticated access without exposing sensitive data or enabling unauthorized operations.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access the system from a new incognito browser session without login."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that no sensitive or private user data is accessible."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that creation or modification operations that require authentication are restricted or disabled."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "TypeScript Type Coverage and Validation",
+    "description": "Confirm that all data models, forms, and service calls have complete TypeScript type coverage ensuring type safety.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Review source code for presence of TypeScript interfaces and types for all entities."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that common invalid data inputs produce type errors during development builds."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Error Handling Utilities: Capture and Report Operational Errors Gracefully",
+    "description": "Test error handling utilities properly catch operational and validation errors and display friendly error messages to users.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Force error scenarios such as network failure, invalid form submission, or service call rejection."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that errors are logged and user-facing notifications or messages are clear and user friendly."
+      }
+    ]
+  }
+]
