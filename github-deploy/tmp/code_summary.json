@@ -1,0 +1,137 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "React 18",
+    "Vite",
+    "Supabase",
+    "TailwindCSS",
+    "Lucide React",
+    "React Hot Toast",
+    "Date-fns",
+    "Recharts",
+    "XLSX",
+    "ESLint",
+    "PostCSS",
+    "Autoprefixer"
+  ],
+  "features": [
+    {
+      "name": "Dashboard",
+      "description": "Dashboard principale con statistiche, metriche di performance, grafici e KPI del business",
+      "files": [
+        "src/components/Dashboard/Dashboard.tsx",
+        "src/components/Dashboard/StatsCard.tsx",
+        "src/services/dashboardService.ts",
+        "src/hooks/useDashboardData.ts"
+      ]
+    },
+    {
+      "name": "Client Management",
+      "description": "Gestione completa dei clienti con CRUD, importazione Excel, filtri avanzati e tracking contratti",
+      "files": [
+        "src/components/Clients/ClientList.tsx",
+        "src/components/Clients/ClientForm.tsx",
+        "src/services/clientService.ts"
+      ]
+    },
+    {
+      "name": "Deal Management",
+      "description": "Gestione trattative commerciali con stati, valori stimati, scadenze e tracking performance",
+      "files": [
+        "src/components/Deals/DealList.tsx",
+        "src/components/Deals/DealForm.tsx",
+        "src/services/dealService.ts"
+      ]
+    },
+    {
+      "name": "Activity Tracking",
+      "description": "Tracciamento attività commerciali (call, email, meeting) con esiti e note",
+      "files": [
+        "src/components/Activities/ActivityList.tsx",
+        "src/services/activityService.ts"
+      ]
+    },
+    {
+      "name": "Reports & Analytics",
+      "description": "Sistema di reportistica con grafici, esportazione Excel e analisi performance",
+      "files": [
+        "src/components/Reports/Reports.tsx"
+      ]
+    },
+    {
+      "name": "Operations Management",
+      "description": "Gestione operazioni, progetti, collaboratori, budget e timeline",
+      "files": [
+        "src/components/Operations/Operations.tsx"
+      ]
+    },
+    {
+      "name": "User Management",
+      "description": "Gestione utenti con sistema di approvazione, ruoli e controllo accessi",
+      "files": [
+        "src/components/Admin/UserManagement.tsx"
+      ]
+    },
+    {
+      "name": "Authentication Context",
+      "description": "Context React per gestione autenticazione e stato utente globale",
+      "files": [
+        "src/contexts/AuthContext.tsx"
+      ]
+    },
+    {
+      "name": "Layout & Navigation",
+      "description": "Sidebar di navigazione con lazy loading dei componenti e gestione stato attivo",
+      "files": [
+        "src/components/Layout/Sidebar.tsx",
+        "src/App.tsx"
+      ]
+    },
+    {
+      "name": "Supabase Integration",
+      "description": "Configurazione e integrazione con database Supabase per persistenza dati",
+      "files": [
+        "src/lib/supabase.ts"
+      ]
+    },
+    {
+      "name": "Type Definitions",
+      "description": "Definizioni TypeScript complete per tutti i modelli di dati e interfacce",
+      "files": [
+        "src/types/index.ts"
+      ]
+    },
+    {
+      "name": "Utility Functions",
+      "description": "Funzioni di utilità per gestione errori, validazione dati, cache e mock data",
+      "files": [
+        "src/utils/errorHandler.ts",
+        "src/utils/validation.ts",
+        "src/utils/cacheManager.ts",
+        "src/utils/mockData.ts",
+        "src/utils/healthCheck.ts"
+      ]
+    },
+    {
+      "name": "Environment Configuration",
+      "description": "Configurazione ambiente con fallback e gestione connessioni",
+      "files": [
+        "src/config/environment.ts"
+      ]
+    },
+    {
+      "name": "System Monitoring",
+      "description": "Sistema di monitoraggio salute servizi e status connessioni",
+      "files": [
+        "src/components/SystemStatus.tsx"
+      ]
+    },
+    {
+      "name": "Notification Service",
+      "description": "Servizio notifiche per scadenze contratti e promemoria",
+      "files": [
+        "src/services/notificationService.ts"
+      ]
+    }
+  ]
+}
